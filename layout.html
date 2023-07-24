@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" ,initial scale="1.0" />
+    <title>Grid Layout</title>
+    <style>
+      main {
+        display: grid;
+        grid-template-areas:
+          header header header header header
+          sidebar section section ads
+          sidebar section section section
+          footer footer footer footer footer;
+      }
+      header {
+        grid-area: header;
+      }
+      #sidebar {
+        grid-area: sidebar;
+      }
+      #content {
+        grid-area: section;
+      }
+      #ads {
+        grid-area: ads;
+      }
+      footer {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>Header</header>
+      <aside id="sidebar">Sidesar</aside>
+      <section>
+        <article>A</article>
+        <article>B</article>
+        <article>C</article>
+      </section>
+      <aside>Ads</aside>
+      <footer>Footer</footer>
+    </main>
+  </body>
+</html>

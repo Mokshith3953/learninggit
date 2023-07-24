@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width",initial scale="1.0">
-        <title>Grid</title>
-    </head>
-    <body>
-        <h1>Welcome to Grid</h1>
-        <div class="item">
-            A
-        </div>
-        <div class="item">
-            B
-        </div>
-        <div class="item">
-            C
-        </div>
-        <div class="item">
-            D
-        </div>
-        <div class="item">
-            E
-        </div>
-        <div class="item">
-            F
-        </div>
-        <div class="item">
-            G
-        </div>
-    </body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" ,initial scale="1.0" />
+    <title>Grid</title>
+    <style>
+      .container {
+        border: 2px solid brown;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(200px, 400px));
+        grid-template-rows: repeat(3, 200px);
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 20px;
+      }
+      .grid-item {
+        background-color: gold;
+        font-size: 2opx;
+      }
+      #A {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+      #D {
+        grid-column-start: 2;
+        grid-column-end: -1;
+      }
+      #J {
+        grid-row-start: 3;
+        grid-row-end: 5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid-item" id="A">A</div>
+      <div class="grid-item">B</div>
+      <div class="grid-item">C</div>
+      <div class="grid-item" id="D">D</div>
+      <div class="grid-item">E</div>
+      <div class="grid-item">F</div>
+      <div class="grid-item">G</div>
+      <div class="grid-item">H</div>
+      <div class="grid-item">I</div>
+      <div class="grid-item" id="J">J</div>
+      <div class="grid-item">K</div>
+      <div class="grid-item">L</div>
+      <div class="grid-item">M</div>
+    </div>
+  </body>
 </html>
